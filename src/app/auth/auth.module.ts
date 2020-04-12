@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AuthComponent } from './auth.component';
-import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 
-const routes: Routes = [{ path: 'auth', component: AuthComponent }];
-
 @NgModule({
-  declarations: [
-    AuthComponent,
-  ],
+  declarations: [AuthComponent],
   imports: [
     FormsModule,
-    RouterModule.forChild(routes),
-    SharedModule,
+    RouterModule.forChild([{ path: '', component: AuthComponent }]),
+    SharedModule
   ]
 })
 export class AuthModule {}

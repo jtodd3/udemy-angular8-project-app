@@ -14,6 +14,6 @@ import { AuthInterceptorService } from './auth/auth-interceptor.service';
       useClass: AuthInterceptorService,
       multi: true
     }
-  ],
+  ]
 })
 export class CoreModule {}
